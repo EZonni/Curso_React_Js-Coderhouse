@@ -1,0 +1,43 @@
+.fuente, .menu, .texto {
+  font-family: 'Roboto', sans-serif;
+  color: white; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #d4d3d3;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+  #marginName {
+    margin-left: 5%;
+  }
+
+  .menu {
+    background-image: linear-gradient(red, #d4d3d3);
+    font-size: 2.5rem;
+    position: static; }
+  
+  #marginMenu {
+    margin-right: 5%; }
+  
+  li {
+    display: inline-flex;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
+  .nav-link {
+      text-decoration: none; }
+
+  .nav-link:hover {
+    color: white;
+    transform: scale(1.2); }
