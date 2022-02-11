@@ -1,7 +1,32 @@
-.fuente, .menu, .texto {
+.fuente, .fuenteNavbar {
   font-family: 'Roboto', sans-serif;
-  color: white; }
+  color: white;
+}
 
+.brand {
+  font-size: 30px;
+  align-items: center;
+  margin-top: 11px;
+}
+
+.fuenteNavbar {
+  font-size: 25px;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.iconoCarrito {
+  width: 29px;
+  height: 25px;
+}
+
+main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/*
 html {
   font-size: 62.5%; }
 
@@ -16,7 +41,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+}
 
   #marginName {
     margin-left: 5%;
@@ -40,4 +66,4 @@ header {
 
   .nav-link:hover {
     color: white;
-    transform: scale(1.2); }
+    transform: scale(1.2); }*/
