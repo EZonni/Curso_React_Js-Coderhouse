@@ -10,7 +10,9 @@ function App() {
         <NavBar/>
       </header>
       <main>
-        <ItemListContainer texto="Próximamente"/>
+        <div>
+          <ItemListContainer/>
+        </div>
       </main>
     </>
   );

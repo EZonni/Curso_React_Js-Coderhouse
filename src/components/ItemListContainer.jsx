@@ -1,8 +1,11 @@
-function ItemListContainer({texto}) {
+import React from "react";
+import ItemCount from "./ItemCount.jsx";
+
+function ItemListContainer() {
     return(
-            <p style={{fontSize:"50px"}}>
-                {texto}
-            </p>
+            <>
+                <ItemCount stock="10" initial="1"/>
+            </>
     );
 };
 
