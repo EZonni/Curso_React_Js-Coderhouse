@@ -1,10 +1,16 @@
-import React from "react";
-import ItemCount from "./ItemCount.jsx";
+import React, {useEffect} from "react";
+import ItemList from "./ItemList";
+import Stock from "../stock/stock";
+
+
 
 function ItemListContainer() {
+    
     return(
             <>
-                <ItemCount stock="10" initial="1"/>
+                <div>
+                    <ItemList productos={Stock}/>
+                </div>
             </>
     );
 };
