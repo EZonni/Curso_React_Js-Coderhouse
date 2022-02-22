@@ -1,23 +1,24 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button"
+//import ItemCount from "./ItemCount";
 
 const Item = ({title, price, img}) => {
 
-    const onAdd = (count) => {
-        alert(`Se agregaron ${count} productos al carrito`)
-    };
-
     return(
-        <div style={{
-            margin: `35px`
-        }}>
-            <div>
-                <img src={img} alt={title}/>
+        <>
+        <Card style={{ width: '18rem', margin: `50px` }}>
+            <Card.Img variant="top" src={img} alt={title} />
+            <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <Card.Subtitle>${price}</Card.Subtitle>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "15px"}}>
+                <Button variant="primary">Ver más</Button>
             </div>
-            <h3>{title}</h3>
-            <h4>${price}</h4>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-        </div>
+            {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
+            </Card.Body>
+        </Card>
+        </>
     );
 };
 

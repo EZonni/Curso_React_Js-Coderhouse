@@ -12,7 +12,7 @@ const ItemList = ({productos}) => {
 
             {productos.map((producto) => (
                 <Item {...producto} key={producto.id}/>
-            ))};
+            ))}
 
         </div>
     );

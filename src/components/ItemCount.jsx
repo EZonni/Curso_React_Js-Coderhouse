@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button"
 
 function ItemCount({ stock, initial, onAdd}) {
 
     const inicial = parseInt(initial); 
-    
     const [count, setCount] = useState(inicial);
 
     const sumarItem = () => {
@@ -16,13 +16,13 @@ function ItemCount({ stock, initial, onAdd}) {
 
     return(
         <>
-            <div>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "space-around", margin: "15px"}}>
+                <Button variant="secondary" onClick={restarItem}>-</Button>
                 <h3>{count}</h3>
-                <button onClick={restarItem}>-</button>
-                <button onClick={sumarItem}>+</button>
+                <Button variant="secondary" onClick={sumarItem}>+</Button>
             </div>
-            <div>
-                <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <Button variant="primary" onClick={() => onAdd(count)}>Agregar al carrito</Button>
             </div>
         </>
     );
