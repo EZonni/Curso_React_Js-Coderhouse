@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button"
-//import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
-const Item = ({title, price, img}) => {
+const Item = ({title, price, img, id}) => {
 
     return(
         <>
@@ -13,9 +13,10 @@ const Item = ({title, price, img}) => {
             <Card.Title>{title}</Card.Title>
             <Card.Subtitle>${price}</Card.Subtitle>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "15px"}}>
-                <Button variant="primary">Ver más</Button>
+                <Link to={`/item/${id}`}>
+                    <Button variant="primary">Ver más</Button>
+                </Link>
             </div>
-            {/* <ItemCount stock={10} initial={1} onAdd={onAdd}/> */}
             </Card.Body>
         </Card>
         </>

@@ -11,7 +11,7 @@ function ItemListContainer() {
     const getStock = new Promise ((resolve, reject) => {
         setInterval(() => {
             resolve(Stock)
-        }, 2500);
+        }, 1500);
     });
 
     useEffect(() => {

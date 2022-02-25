@@ -16,13 +16,16 @@ function ItemCount({ stock, initial, onAdd}) {
 
     return(
         <>
-            <div style={{display: "flex", alignItems: "center", justifyContent: "space-around", margin: "15px"}}>
-                <Button variant="secondary" onClick={restarItem}>-</Button>
+            <div style={{display: "flex", alignItems: "center", justifyContent: "space-around", margin: "25px"}}>
+                <Button variant="secondary" onClick={restarItem} style={{marginRight: `20px`}}>-</Button>
                 <h3>{count}</h3>
-                <Button variant="secondary" onClick={sumarItem}>+</Button>
+                <Button variant="secondary" onClick={sumarItem} style={{marginLeft: `20px`}}>+</Button>
             </div>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
                 <Button variant="primary" onClick={() => onAdd(count)}>Agregar al carrito</Button>
+            </div>
+            <div style={{marginTop: `20px`}}>
+                <p>{stock} unidades disponibles</p>
             </div>
         </>
     );
