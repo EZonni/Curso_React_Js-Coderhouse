@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({title, price, img, description, stock}) => {
 
-    const onAdd = (count) => {
-        alert(`Se agregaron ${count} productos al carrito`)
+    const [cart, setCart] = useState(0);
+    
+    const handleItemCount = (e) => {
+        setCart(e);
     };
 
     return(
@@ -19,7 +21,7 @@ const ItemDetail = ({title, price, img, description, stock}) => {
                 <div style={{display: "flex", flexDirection:"column", alignItems: "center", justifyContent: "center"}}>
                     <Card.Title>{title}</Card.Title>
                     <Card.Subtitle>${price}</Card.Subtitle>
-                    <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+                    <ItemCount stock={stock} initial={1} onAdd={(e) => handleItemCount(e)} cart={cart}/>
                 </div>
             </div>
             <div>

@@ -1,12 +1,17 @@
+import React from "react";
 import '../App.css';
+import carrito from "../../src/assets/IconoCarrito.png";
 import Button from "react-bootstrap/Button";
-import carrito from "../../src/assets/IconoCarrito.png"
+import { Link } from "react-router-dom";
+
 
 function CartWidget() {
     return(
-        <Button variant="light" style={{marginRight:"35px"}}>
-            <img alt="icono carrito" className="iconoCarrito" src={carrito}></img>
-        </Button>
+        <Link to={"/cart"}>
+            <Button variant="light" style={{marginRight:"35px"}}>
+                <img alt="icono carrito" className="iconoCarrito" src={carrito}></img>
+            </Button>
+        </Link>
     );  
 };
 

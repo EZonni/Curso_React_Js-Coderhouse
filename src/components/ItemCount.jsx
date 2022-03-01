@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button"
+import Card from "react-bootstrap/Card";
 
-function ItemCount({ stock, initial, onAdd}) {
+function ItemCount({ stock, initial, onAdd, cart}) {
 
     const inicial = parseInt(initial); 
     const [count, setCount] = useState(inicial);
@@ -21,8 +23,21 @@ function ItemCount({ stock, initial, onAdd}) {
                 <h3>{count}</h3>
                 <Button variant="secondary" onClick={sumarItem} style={{marginLeft: `20px`}}>+</Button>
             </div>
-            <div style={{display: "flex", alignItems: "center", justifyContent: "center"}}>
-                <Button variant="primary" onClick={() => onAdd(count)}>Agregar al carrito</Button>
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+                {
+                    cart === 0
+                    ? <Button variant="primary" onClick={() => onAdd(count)}>Agregar al carrito</Button>
+                    :   <>
+                        <div style={{marginBottom: `20px`}}>
+                            <Card.Subtitle>Producto agregado al carrito</Card.Subtitle>
+                        </div>
+                        <div>
+                            <Link to={"/cart"}>
+                                <Button variant="primary">Finalizar compra</Button>
+                            </Link>
+                        </div>
+                        </>
+                }
             </div>
             <div style={{marginTop: `20px`}}>
                 <p>{stock} unidades disponibles</p>
