@@ -2,6 +2,7 @@ import React from "react";
 import Item from "./Item";
 
 const ItemList = ({productos}) => {
+
     return(
         <div style={{
             display: `flex`,
@@ -16,6 +17,7 @@ const ItemList = ({productos}) => {
 
         </div>
     );
+    
 };
 
 export default ItemList;

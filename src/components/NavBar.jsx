@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import '../App.css';
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
@@ -6,8 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 //import NavDropdown from "react-bootstrap/NavDropdown";
 import logo from "../assets/Img.png"
+import { CartContext } from "../context/CartContext";
 
 function NavBar() {
+
+    const { productsCount } = useContext(CartContext);
+
     return(
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">
@@ -34,7 +38,7 @@ function NavBar() {
                         <NavDropdown.Item href="#action/3.3">Accesorios</NavDropdown.Item>
                     </NavDropdown> */}
                 </Nav>
-                <CartWidget></CartWidget>
+                <CartWidget count={productsCount}></CartWidget>
             </Navbar>
     );
 };

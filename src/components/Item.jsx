@@ -14,7 +14,7 @@ const Item = ({title, price, img, id}) => {
             <Card.Subtitle>${price}</Card.Subtitle>
             <div style={{display: "flex", alignItems: "center", justifyContent: "center", margin: "15px"}}>
                 <Link to={`/item/${id}`}>
-                    <Button variant="primary">Ver más</Button>
+                    <Button variant="primary"> Ver más </Button>
                 </Link>
             </div>
             </Card.Body>

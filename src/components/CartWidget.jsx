@@ -5,11 +5,14 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
 
-function CartWidget() {
+function CartWidget({count}) {
     return(
         <Link to={"/cart"}>
             <Button variant="light" style={{marginRight:"35px"}}>
-                <img alt="icono carrito" className="iconoCarrito" src={carrito}></img>
+                <div style={{display: "flex", flexDirection: "row"}}>
+                    <img alt="icono carrito" className="iconoCarrito" src={carrito}></img>
+                    <span style={{marginLeft: `10px`, fontSize: `20px`}}> {count} </span>
+                </div>
             </Button>
         </Link>
     );  

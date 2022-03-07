@@ -9,9 +9,9 @@ function ItemListContainer() {
     const [items, setItems] = useState([]);
 
     const getStock = new Promise ((resolve, reject) => {
-        setInterval(() => {
+        setTimeout(() => {
             resolve(Stock)
-        }, 1500);
+        }, 1000);
     });
 
     useEffect(() => {
