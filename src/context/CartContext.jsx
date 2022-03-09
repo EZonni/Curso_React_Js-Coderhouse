@@ -29,9 +29,11 @@ export const CartProvider = ({children}) => {
         };
        
         const removeItems = (item) => {
-
-            const remove = cartProducts.filter(producto => producto.id === item.id);
-            setCartProducts(remove);
+            if(cartProducts.some(product => product.id === item.id)) {
+                const remove = cartProducts.filter(product => product.id !== item.id);
+                setCartProducts(remove);
+                setProductsCount(prev => prev - item.quantity);
+            };
         };
 
     return ( 

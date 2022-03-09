@@ -35,7 +35,7 @@ const Cart = () => {
                                 <Card.Title>{producto.title}</Card.Title>
                                 <Card.Title>Cantidad: {producto.quantity}</Card.Title>
                                 {/* <Card.Title>Precio: ${producto.price}</Card.Title> */}
-                                <Button variant="danger" onClick={(producto)=>removeItems(producto)}> <img src={RecycleBin} alt="RecycleBin" style={{width: `35px`}}/> </Button>
+                                <Button variant="danger" onClick={()=>removeItems(producto)}> <img src={RecycleBin} alt="RecycleBin" style={{width: `35px`}}/> </Button>
                     </Card.Body>
                     </Card>
                     </>
