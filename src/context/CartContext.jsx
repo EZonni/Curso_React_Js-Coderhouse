@@ -23,7 +23,7 @@ export const CartProvider = ({children}) => {
             
             } else {
                 
-                setCartProducts([...cartProducts,{...item,quantity}])
+                setCartProducts([...cartProducts,{...item, quantity}])
                 setProductsCount(prev => prev + quantity)}
                 
         };
@@ -36,9 +36,16 @@ export const CartProvider = ({children}) => {
             };
         };
 
+        const finalPrice =  cartProducts.reduce((prev,product) => prev + (product.price * product.quantity),0);
+
+        const cleanCart = () => {
+            setCartProducts([]);
+            setProductsCount(0);
+        };
+
     return ( 
 
-        <CartContext.Provider value={{cartProducts, productsCount, addItemsToCart, removeItems}}> {children} </CartContext.Provider>
+        <CartContext.Provider value={{cartProducts, productsCount, addItemsToCart, removeItems, finalPrice, cleanCart}}> {children} </CartContext.Provider>
 
     );
       

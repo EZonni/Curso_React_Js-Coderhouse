@@ -10,7 +10,7 @@ const ItemDetail = ({title, price, img, description, stock, id}) => {
     const {addItemsToCart, productsCount} = useContext(CartContext);
     
     const handleItemCount = (e) => {
-        addItemsToCart({id, title, description, img, stock}, e);
+        addItemsToCart({id, title, description, img, stock, price}, e);
         alert(`${title} agregado al carrito de compras`);
     };
 

@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
             const productoSeleccionado = productosStock.find((elemento) => elemento.id === nombreProducto);
             setTimeout(() => {
                 resolve(productoSeleccionado)
-            }, 1000);
+            }, 250);
         });
     };
 
