@@ -46,29 +46,3 @@ function ItemListContainer() {
 };
 
 export default ItemListContainer;
-
-// ----------------------------------------------------------
-
-    /*const getStock = new Promise ((resolve, reject) => {
-        setTimeout(() => {
-            resolve(Stock)
-        }, 250);
-    });
-
-    useEffect(() => {
-        getStock.then((items) => {
-            setItems(items);
-        })
-    }, []);*/
-
-
-        /*const getDataCategory = async () => {
-        try {
-            const itemsCollection = collection(db, "Stock");
-            const col = await getDocs(itemsCollection);
-            const result = col.docs.map((doc) => doc = {id:doc.id, ...doc.data()});
-            setItems(result.filter(e => e.category === category ));
-        } catch (error) {
-            console.warn("error", error);
-        };
-    };*/

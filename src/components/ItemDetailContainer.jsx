@@ -39,23 +39,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-
-// -------------------------------------------
-
-/*const getDetail = (nombreProducto) => {
-    return new Promise ((resolve, reject) => {
-        const productosStock = Stock;
-        const productoSeleccionado = productosStock.find((elemento) => elemento.id === nombreProducto);
-        setTimeout(() => {
-            resolve(productoSeleccionado)
-        }, 250);
-    });
-};
-
-useEffect(() => {
-    const obtenerProductoSeleccionado = async(id) => {
-        const responsePromise = await getDetail(id);
-        setMyDetail(responsePromise);
-    };
-    obtenerProductoSeleccionado(id);
-}, [id]);*/
