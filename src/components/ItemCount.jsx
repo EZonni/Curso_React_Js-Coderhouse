@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../App.css';
 import Button from "react-bootstrap/Button"
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -15,12 +16,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return(
         <>
-            <div style={{display: "flex", alignItems: "center", justifyContent: "space-around", margin: "25px"}}>
+            <div id="divBotonesCantidad">
                 <Button variant="secondary" onClick={restarItem} style={{marginRight: `20px`}}> - </Button>
                 <h3>{count}</h3>
                 <Button variant="secondary" onClick={sumarItem} style={{marginLeft: `20px`}}> + </Button>
             </div>
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
+            <div id="divBTN">
                 {
                     count > 0 ?
                         <Button variant="primary" onClick={() => onAdd(count)}> Agregar al carrito </Button>

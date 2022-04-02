@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import '../App.css';
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { doc, getDoc } from "firebase/firestore";
@@ -25,14 +26,8 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return(
-        <div style={{
-            display: `flex`,
-            justifyContent: `center`,
-            alignContent: `center`,
-            }}>
-
+        <div id="itemDetContDiv">
             <ItemDetail {...myDetail} />
-            
         </div>
     );
 

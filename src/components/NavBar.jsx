@@ -14,29 +14,26 @@ function NavBar() {
 
     return(
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand>
                     <img
                         alt="logo"
                         src={logo}
-                        width="125"
-                        height="100"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top navbarImg"
                     />{' '}
                 </Navbar.Brand>
                 <p className="fuente brand">SimGarage</p>
                 <Nav className="me-auto fuenteNavbar">
-                    <Link to={`/`} style={{textDecoration: "none"}}>
+                    <Link to={`/`} className="linkTextDecoration">
                         <Nav.Link href="#home">Home</Nav.Link>
                     </Link>
-                    <Nav.Link href="#nosotros">Nosotros</Nav.Link>
                     <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                        <Link to={`/itemCategory/:volante`} style={{textDecoration: "none"}}>
+                        <Link to={`/category/volante`} className="linkTextDecoration">
                             <NavDropdown.Item href="#action/3.1">Volantes</NavDropdown.Item>
                         </Link>
-                        <Link to={`/itemCategory/:pedalera`} style={{textDecoration: "none"}}>
+                        <Link to={`/category/pedalera`} className="linkTextDecoration">
                             <NavDropdown.Item href="#action/3.2">Pedaleras</NavDropdown.Item>
                         </Link>
-                        <Link to={`/itemCategory/:accesorio`} style={{textDecoration: "none"}}>
+                        <Link to={`/category/accesorio`} className="linkTextDecoration">
                             <NavDropdown.Item href="#action/3.3">Accesorios</NavDropdown.Item>
                         </Link>
                     </NavDropdown>

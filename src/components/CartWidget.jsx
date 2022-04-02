@@ -9,9 +9,9 @@ function CartWidget({count}) {
     return(
         <Link to={"/cart"}>
             <Button variant="light" style={{marginRight:"35px"}}>
-                <div style={{display: "flex", flexDirection: "row"}}>
+                <div id="cartWidgetDiv">
                     <img alt="icono carrito" className="iconoCarrito" src={carrito}></img>
-                    { count > 0 ? (<span style={{marginLeft: `10px`, fontSize: `20px`}}> {count} </span>)
+                    { count > 0 ? (<span id="cartWidgetSpan"> {count} </span>)
                         : (<></>)
                     }
                 </div>

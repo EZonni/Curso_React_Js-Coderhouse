@@ -12,13 +12,13 @@ export const CartProvider = ({children}) => {
   
         const addItemsToCart = (item, quantity)=>{
             if (cartProducts.some(product => product.id === item.id)) {
-                const copyPaste = [...cartProducts];
+                const repetirProducto = [...cartProducts];
                 const prodIndex = cartProducts.findIndex(product => product.id === item.id);
-                copyPaste[prodIndex] = {
-                    ...copyPaste[prodIndex],
-                    quantity: copyPaste[prodIndex].quantity + quantity,
+                repetirProducto[prodIndex] = {
+                    ...repetirProducto[prodIndex],
+                    quantity: repetirProducto[prodIndex].quantity + quantity,
                 };
-                setCartProducts(copyPaste);
+                setCartProducts(repetirProducto);
                 setProductsCount(prev => prev + quantity)
             
             } else {

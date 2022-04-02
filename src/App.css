@@ -1,3 +1,11 @@
+main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* ----- NavBar -----*/
+
 .fuente, .fuenteNavbar {
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -15,55 +23,119 @@
   margin-left: 50px;
 }
 
+.navbarImg {
+    width: 125px;
+    height: 100px;
+}
+
 .iconoCarrito {
   width: 29px;
   height: 25px;
 }
 
-main {
-  display: flex;
-  align-content: center;
-  justify-content: center;
+.linkTextDecoration {
+  text-decoration: none;
 }
 
-/*
-html {
-  font-size: 62.5%; }
+/* ----- ItemList -----*/
 
-body {
-  background-color: #d4d3d3;
+#itemListDiv {
   display: flex;
-  flex-direction: column;
-  margin: 0;
-  min-height: 100vh; }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
-  #marginName {
-    margin-left: 5%;
-  }
+/* ----- Item -----*/
 
-  .menu {
-    background-image: linear-gradient(red, #d4d3d3);
-    font-size: 2.5rem;
-    position: static; }
-  
-  #marginMenu {
-    margin-right: 5%; }
-  
-  li {
-    display: inline-flex;
-    padding-left: 1rem;
-    padding-right: 1rem; }
+#itemCard {
+  width: 300px;
+  margin: 50px;
+}
 
-  .nav-link {
-      text-decoration: none; }
+#itemDivBTN {
+  display: flex;
+  align-Items: center;
+  justify-Content: center;
+  margin: 15px;
+}
 
-  .nav-link:hover {
-    color: white;
-    transform: scale(1.2); }*/
+/* ----- ItemDetailContainer -----*/
+
+#itemDetContDiv {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* ----- ItemDetail -----*/
+
+#itemDetCardBody {
+  width: 1000px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#itemDetDivContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+#itemDetInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- Cart -----*/
+
+#emptyCartCardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cartDivContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between,
+}
+
+#cartCardBody {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* ----- ItemCount -----*/
+
+#divBotonesCantidad {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 25px;
+}
+
+#divBTN {
+  display: flex;
+  flex-Direction: column;
+  align-Items: center;
+  justify-Content: center;
+}
+
+/* ----- CartWidget -----*/
+
+#cartWidgetDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+#cartWidgetSpan {
+  margin-left: 10px;
+  font-size: 20px;
+}
